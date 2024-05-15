@@ -82,7 +82,8 @@ def main():
         tokens = ['"{}"'.format(i) for i in tokens]
 
     if args.comma:
-        output = ','.join(tokens)
+        delimiter = ', ' if args.space else ','
+        output = delimiter.join(tokens)
     elif args.newline:
         output = '\n'.join(tokens)
     # Splunk OR style
