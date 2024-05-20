@@ -91,7 +91,6 @@ def main():
             delimiter = ',\n'
 
         output = delimiter.join(tokens)
-        output = delimiter.join(tokens)
     elif args.newline:
         output = '\n'.join(tokens)
     # Splunk OR style
