@@ -84,11 +84,11 @@ def main():
     if args.comma:
         delimiter = ','
 
-        # space after comma (-c -s) or newline after comma (-c -n)
-        if args.space:
-            delimiter = ', '
-        elif args.newline:
+        # newline after comman (-c -n) or space after comma (-c -s)
+        if args.newline:
             delimiter = ',\n'
+        elif args.space:
+            delimiter = ', '
 
         output = delimiter.join(tokens)
     elif args.newline:
