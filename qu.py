@@ -84,7 +84,7 @@ def main():
     if args.comma:
         delimiter = ','
 
-        # newline after comman (-c -n) or space after comma (-c -s)
+        # newline after comma (-c -n) or space after comma (-c -s)
         if args.newline:
             delimiter = ',\n'
         elif args.space:
