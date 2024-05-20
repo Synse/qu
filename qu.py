@@ -82,7 +82,15 @@ def main():
         tokens = ['"{}"'.format(i) for i in tokens]
 
     if args.comma:
-        delimiter = ', ' if args.space else ','
+        delimiter = ','
+
+        # space after comma (-c -s) or newline after comma (-c -n)
+        if args.space:
+            delimiter = ', '
+        elif args.newline:
+            delimiter = ',\n'
+
+        output = delimiter.join(tokens)
         output = delimiter.join(tokens)
     elif args.newline:
         output = '\n'.join(tokens)
